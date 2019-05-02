@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask,render_template
 from werkzeug.contrib.fixers import ProxyFix
 app = Flask(__name__, static_url_path='/home/user/qwitty/flask')
 
 @app.route('/')
 def root():
-    return app.send_static_file('/init/index.html')
+    return render_template('init/index.html')
 
 
 app.wsgi_app = ProxyFix(app.wsgi_app)
