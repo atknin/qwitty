@@ -4,7 +4,10 @@ app = Flask(__name__, static_url_path='/home/user/qwitty/flask')
 
 @app.route('/')
 def root():
-    return render_template('init/index.html')
+    try:
+        return render_template('init/index.html')
+    except Exception as e:
+        return e
 
 
 app.wsgi_app = ProxyFix(app.wsgi_app)
