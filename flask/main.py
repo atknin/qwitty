@@ -1,6 +1,6 @@
 from flask import Flask
 from werkzeug.contrib.fixers import ProxyFix
-app = Flask(__name__, static_url_path='')
+app = Flask(__name__, static_url_path='/home/user/qwitty/flask')
 
 @app.route('/')
 def root():

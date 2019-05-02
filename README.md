@@ -41,3 +41,4 @@ WantedBy=multi-user.target
 sudo systemctl enable flask_gunicorn
 sudo systemctl start flask_gunicorn
 sudo systemctl status flask_gunicorn
+sudo systemctl restart flask_gunicorn
